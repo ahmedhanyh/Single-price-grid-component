@@ -22,6 +22,7 @@ body {
   font-size: 16px;
   font-family: "Karla", sans-serif;
   background-color: var(--light-gray);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,9 +30,10 @@ body {
 }
 
 .main-content {
+  margin: 20px;
   max-width: 700px;
-  border-radius: 12px;
-  /* box-shadow: ; */
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgb(184, 184, 184);
   overflow: hidden;
   color: white;
   display: grid;
@@ -64,6 +66,7 @@ body {
 
 .join-us__offer {
   color: var(--grayish-blue);
+  line-height: 2;
 }
 
 .main-content__monthly-sub {
@@ -127,4 +130,14 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 620px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content > * {
+    padding: 24px;
+  }
 }
